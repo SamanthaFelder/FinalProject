@@ -60,5 +60,19 @@ namespace FinalProject
 
             dbConnection.Close();
         }
+
+        private void managerButton_Click(object sender, EventArgs e)
+        {
+            ManagerLogIn myManagerLogIn = new ManagerLogIn();
+
+            myManagerLogIn.ShowDialog();
+        }
+
+        private void clientButton_Click(object sender, EventArgs e)
+        {
+            ClientLogIn myClientLogIn = new ClientLogIn();
+
+            myClientLogIn.ShowDialog();
+        }
     }
 }

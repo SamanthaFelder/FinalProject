@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.managerButton = new System.Windows.Forms.Button();
+            this.clientButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -42,31 +42,33 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Log in as:";
             // 
-            // button1
+            // managerButton
             // 
-            this.button1.Location = new System.Drawing.Point(34, 83);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Manager";
-            this.button1.UseVisualStyleBackColor = true;
+            this.managerButton.Location = new System.Drawing.Point(34, 83);
+            this.managerButton.Name = "managerButton";
+            this.managerButton.Size = new System.Drawing.Size(136, 23);
+            this.managerButton.TabIndex = 1;
+            this.managerButton.Text = "Manager";
+            this.managerButton.UseVisualStyleBackColor = true;
+            this.managerButton.Click += new System.EventHandler(this.managerButton_Click);
             // 
-            // button2
+            // clientButton
             // 
-            this.button2.Location = new System.Drawing.Point(227, 83);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Client";
-            this.button2.UseVisualStyleBackColor = true;
+            this.clientButton.Location = new System.Drawing.Point(227, 83);
+            this.clientButton.Name = "clientButton";
+            this.clientButton.Size = new System.Drawing.Size(136, 23);
+            this.clientButton.TabIndex = 2;
+            this.clientButton.Text = "Client";
+            this.clientButton.UseVisualStyleBackColor = true;
+            this.clientButton.Click += new System.EventHandler(this.clientButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(426, 168);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.clientButton);
+            this.Controls.Add(this.managerButton);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "FirstForm";
@@ -78,8 +80,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button managerButton;
+        private System.Windows.Forms.Button clientButton;
     }
 }
 
