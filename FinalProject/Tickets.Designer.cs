@@ -28,17 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ticketTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // ticketTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(58, 75);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 20);
-            this.textBox1.TabIndex = 0;
+            this.ticketTextBox.Enabled = false;
+            this.ticketTextBox.Location = new System.Drawing.Point(58, 75);
+            this.ticketTextBox.Name = "ticketTextBox";
+            this.ticketTextBox.ReadOnly = true;
+            this.ticketTextBox.Size = new System.Drawing.Size(138, 20);
+            this.ticketTextBox.TabIndex = 0;
+            this.ticketTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -53,11 +56,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 59);
+            this.label1.Location = new System.Drawing.Point(72, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 13);
+            this.label1.Size = new System.Drawing.Size(112, 13);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Number of tickets sold:";
+            this.label1.Text = "Number of tickets sold";
             // 
             // Tickets
             // 
@@ -66,9 +69,10 @@
             this.ClientSize = new System.Drawing.Size(251, 116);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ticketTextBox);
             this.Name = "Tickets";
             this.Text = "Tickets";
+            this.Load += new System.EventHandler(this.Tickets_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -76,7 +80,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ticketTextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
     }
