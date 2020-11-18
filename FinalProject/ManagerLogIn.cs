@@ -16,5 +16,13 @@ namespace FinalProject
         {
             InitializeComponent();
         }
+
+        private void managerLogInButton_Click(object sender, EventArgs e)
+        {
+            // Create an instance of the SelectionScreen class.
+            SelectionScreen mySelectionScreen = new SelectionScreen();
+            // Display the form.
+            mySelectionScreen.ShowDialog();
+        }
     }
 }

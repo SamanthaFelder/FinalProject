@@ -63,15 +63,17 @@ namespace FinalProject
 
         private void managerButton_Click(object sender, EventArgs e)
         {
+            // Create an instance of the ManagerLogIn class.
             ManagerLogIn myManagerLogIn = new ManagerLogIn();
-
+            // Display the form.
             myManagerLogIn.ShowDialog();
         }
 
         private void clientButton_Click(object sender, EventArgs e)
         {
+            // Create an instance of the ClientLogIn class.
             ClientLogIn myClientLogIn = new ClientLogIn();
-
+            // Display the form.
             myClientLogIn.ShowDialog();
         }
     }

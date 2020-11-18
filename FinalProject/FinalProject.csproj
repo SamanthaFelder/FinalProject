@@ -86,6 +86,24 @@
     <Compile Include="ClientLogIn.Designer.cs">
       <DependentUpon>ClientLogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clients.Designer.cs">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientSelection.Designer.cs">
+      <DependentUpon>ClientSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientTicket.Designer.cs">
+      <DependentUpon>ClientTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,16 +116,64 @@
     <Compile Include="ManagerLogIn.Designer.cs">
       <DependentUpon>ManagerLogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Movies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movies.Designer.cs">
+      <DependentUpon>Movies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScreeningRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScreeningRooms.Designer.cs">
+      <DependentUpon>ScreeningRooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectionScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectionScreen.Designer.cs">
+      <DependentUpon>SelectionScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Showtimes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Showtimes.Designer.cs">
+      <DependentUpon>Showtimes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tickets.Designer.cs">
+      <DependentUpon>Tickets.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ClientLogIn.resx">
       <DependentUpon>ClientLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clients.resx">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientSelection.resx">
+      <DependentUpon>ClientSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientTicket.resx">
+      <DependentUpon>ClientTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerLogIn.resx">
       <DependentUpon>ManagerLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movies.resx">
+      <DependentUpon>Movies.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -118,6 +184,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ScreeningRooms.resx">
+      <DependentUpon>ScreeningRooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionScreen.resx">
+      <DependentUpon>SelectionScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Showtimes.resx">
+      <DependentUpon>Showtimes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tickets.resx">
+      <DependentUpon>Tickets.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

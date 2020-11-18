@@ -62,6 +62,7 @@
             this.clientLogInButton.TabIndex = 7;
             this.clientLogInButton.Text = "Log In";
             this.clientLogInButton.UseVisualStyleBackColor = true;
+            this.clientLogInButton.Click += new System.EventHandler(this.clientLogInButton_Click);
             // 
             // clientPassTextBox
             // 
@@ -85,6 +86,7 @@
             this.signUpButton.TabIndex = 10;
             this.signUpButton.Text = "Sign Up";
             this.signUpButton.UseVisualStyleBackColor = true;
+            this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
             // 
             // ClientLogIn
             // 
