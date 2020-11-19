@@ -87,6 +87,8 @@ namespace FinalProject
 
         private void clientLogInButton_Click(object sender, EventArgs e)
         {
+            GetClientsFromDB();
+
             // Check if username exists, if the user is a client, and if the password is correct.
             if (foundMembers.Exists(x => x.Username == clientUserTextBox.Text && x.Type == 1 && x.Password == clientPassTextBox.Text))
             {
