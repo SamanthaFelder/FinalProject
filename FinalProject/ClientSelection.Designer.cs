@@ -39,33 +39,41 @@
             // moviesListBox
             // 
             this.moviesListBox.FormattingEnabled = true;
-            this.moviesListBox.Location = new System.Drawing.Point(39, 45);
+            this.moviesListBox.ItemHeight = 16;
+            this.moviesListBox.Location = new System.Drawing.Point(52, 55);
+            this.moviesListBox.Margin = new System.Windows.Forms.Padding(4);
             this.moviesListBox.Name = "moviesListBox";
-            this.moviesListBox.Size = new System.Drawing.Size(218, 290);
+            this.moviesListBox.Size = new System.Drawing.Size(289, 356);
             this.moviesListBox.TabIndex = 0;
+            this.moviesListBox.SelectedIndexChanged += new System.EventHandler(this.moviesListBox_SelectedIndexChanged);
             // 
             // showtimesListBox
             // 
             this.showtimesListBox.FormattingEnabled = true;
-            this.showtimesListBox.Location = new System.Drawing.Point(490, 45);
+            this.showtimesListBox.ItemHeight = 16;
+            this.showtimesListBox.Location = new System.Drawing.Point(653, 55);
+            this.showtimesListBox.Margin = new System.Windows.Forms.Padding(4);
             this.showtimesListBox.Name = "showtimesListBox";
-            this.showtimesListBox.Size = new System.Drawing.Size(218, 290);
+            this.showtimesListBox.Size = new System.Drawing.Size(289, 356);
             this.showtimesListBox.TabIndex = 1;
             // 
             // moviesPictureBox
             // 
             this.moviesPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.moviesPictureBox.Location = new System.Drawing.Point(264, 45);
+            this.moviesPictureBox.Location = new System.Drawing.Point(352, 55);
+            this.moviesPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.moviesPictureBox.Name = "moviesPictureBox";
-            this.moviesPictureBox.Size = new System.Drawing.Size(220, 290);
+            this.moviesPictureBox.Size = new System.Drawing.Size(293, 356);
+            this.moviesPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.moviesPictureBox.TabIndex = 2;
             this.moviesPictureBox.TabStop = false;
             // 
             // buyButton
             // 
-            this.buyButton.Location = new System.Drawing.Point(525, 350);
+            this.buyButton.Location = new System.Drawing.Point(700, 431);
+            this.buyButton.Margin = new System.Windows.Forms.Padding(4);
             this.buyButton.Name = "buyButton";
-            this.buyButton.Size = new System.Drawing.Size(159, 23);
+            this.buyButton.Size = new System.Drawing.Size(212, 28);
             this.buyButton.TabIndex = 3;
             this.buyButton.Text = "Buy Ticket";
             this.buyButton.UseVisualStyleBackColor = true;
@@ -75,22 +83,24 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(236, 9);
+            this.label4.Location = new System.Drawing.Point(315, 11);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(282, 24);
+            this.label4.Size = new System.Drawing.Size(353, 29);
             this.label4.TabIndex = 13;
             this.label4.Text = "Select a movie and showtime";
             // 
             // ClientSelection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 385);
+            this.ClientSize = new System.Drawing.Size(1000, 474);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.buyButton);
             this.Controls.Add(this.moviesPictureBox);
             this.Controls.Add(this.showtimesListBox);
             this.Controls.Add(this.moviesListBox);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ClientSelection";
             this.Text = "ClientSelection";
             ((System.ComponentModel.ISupportInitialize)(this.moviesPictureBox)).EndInit();

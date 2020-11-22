@@ -16,5 +16,12 @@ namespace FinalProject
         {
             InitializeComponent();
         }
+
+        private void ClientTicket_Load(object sender, EventArgs e)
+        {
+            textBox1.Text = ClientSelection.Date.ToString();
+            textBox2.Text = ClientSelection.Movie;
+            textBox3.Text = ClientSelection.Room;
+        }
     }
 }

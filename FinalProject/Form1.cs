@@ -76,5 +76,10 @@ namespace FinalProject
             // Display the form.
             myClientLogIn.ShowDialog();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

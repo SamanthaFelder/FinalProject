@@ -20,16 +20,5 @@ namespace FinalProject
         {
 
         }
-
-        public Member(int id, string name, string username, string password, string email, int type, DateTime signUpTime)
-        {
-            Id = id;
-            Name = name;
-            Username = username;
-            Password = password;
-            Email = email;
-            Type = type;
-            SignUpTime = signUpTime;
-        }
     }
 }

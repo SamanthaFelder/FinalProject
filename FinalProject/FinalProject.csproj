@@ -117,6 +117,7 @@
     <Compile Include="ManagerLogIn.Designer.cs">
       <DependentUpon>ManagerLogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Movie.cs" />
     <Compile Include="Movies.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +126,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScreeningRoom.cs" />
     <Compile Include="ScreeningRooms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +139,7 @@
     <Compile Include="SelectionScreen.Designer.cs">
       <DependentUpon>SelectionScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShowTime.cs" />
     <Compile Include="Showtimes.cs">
       <SubType>Form</SubType>
     </Compile>
