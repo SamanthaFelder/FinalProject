@@ -21,8 +21,10 @@ namespace FinalProject
         public static DateTime Date;
         public static string Movie;
         public static string Room;
+        public static string ShowTimeId;
 
         NpgsqlConnection dbConnection;
+
         public ClientSelection()
         {
              
@@ -217,8 +219,8 @@ namespace FinalProject
             //if s dosent already exist
             NewTicket.Id = int.Parse(s);
             NewTicket.Purchase_date_time = DateTime.Now;
-           // NewTicket.ShowTimeId = ;
-           // NewTicket.UserId = ;
+            NewTicket.ShowTimeId = int.Parse(ShowTimeId);
+            NewTicket.UserId = ClientLogIn.UserId;
 
             InsertTicketInDB(NewTicket);
             
@@ -271,6 +273,7 @@ namespace FinalProject
                         //to check seleted date
                         Date = ShowTime.Date;
                         Room = ShowTime.RoomCode;
+                        ShowTimeId = ShowTime.Id.ToString();
                     }
                 }
 
@@ -282,4 +285,7 @@ namespace FinalProject
         }
     }
 }
-
+//to check seleted date
+//if s dosent already exist
+//show price and hour on list showtime
+//witch movie is with witch ticket

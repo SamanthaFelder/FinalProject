@@ -18,6 +18,7 @@ namespace FinalProject
         private const string DbUsername = "postgres";
         private const string DbUuserPassword = "peteypete117";
         private const string DbName = "OOP";
+        public static int UserId;
 
         NpgsqlConnection dbConnection;
         public ClientLogIn()
@@ -34,15 +35,6 @@ namespace FinalProject
             string conectionString = "Host=" + serverAddress + "; Username=" + username + "; Password=" + passwd + "; Database=" + dbName + ";";
 
             dbConnection = new NpgsqlConnection(conectionString);
-        }
-
-        private NpgsqlConnection CreateDBConnection(string serverAddress, string username, string passwd, string dbName)
-        {
-            string conectionString = "Host=" + serverAddress + "; Username=" + username + "; Password=" + passwd + "; Database=" + dbName + ";";
-
-            dbConnection = new NpgsqlConnection(conectionString);
-
-            return dbConnection;
         }
 
         private List<Member> GetClientsFromDB()
@@ -92,10 +84,20 @@ namespace FinalProject
             // Check if username exists, if the user is a client, and if the password is correct.
             if (foundMembers.Exists(x => x.Username == clientUserTextBox.Text && x.Type == 1 && x.Password == clientPassTextBox.Text))
             {
+                foreach (Member member in foundMembers)
+                {
+                    if (member.Username == clientUserTextBox.Text && member.Type == 1 && member.Password == clientPassTextBox.Text)
+                    { 
+                           UserId = member.Id;
+                    }
+                }
+                
                 // Create an instance of the ClientSelection class.
                 ClientSelection myClientSelection = new ClientSelection();
                 // Display the form.
                 myClientSelection.ShowDialog();
+
+                
             }
             else
             {
