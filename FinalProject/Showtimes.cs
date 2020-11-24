@@ -23,7 +23,7 @@ namespace FinalProject
         {
             InitializeComponent();
             SetDBConnection(DbServerHost, DbUsername, DbUuserPassword, DbName);
-            
+            GetShowTimeFromDB();
         }
 
         List<ShowTime> foundShowTime = new List<ShowTime>();
@@ -73,6 +73,31 @@ namespace FinalProject
             dbConnection.Close();
 
             return foundShowTime;
+        }
+
+        private void showtimesListbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void consultButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void modifyButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

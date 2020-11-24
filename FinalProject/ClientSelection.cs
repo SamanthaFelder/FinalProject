@@ -289,3 +289,4 @@ namespace FinalProject
 //if s dosent already exist
 //show price and hour on list showtime
 //witch movie is with witch ticket
+//show after current date showtimes
