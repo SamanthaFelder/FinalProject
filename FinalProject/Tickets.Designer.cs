@@ -31,12 +31,14 @@
             this.ticketTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.moviesListBox = new System.Windows.Forms.ListBox();
+            this.showtimesListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // ticketTextBox
             // 
             this.ticketTextBox.Enabled = false;
-            this.ticketTextBox.Location = new System.Drawing.Point(58, 75);
+            this.ticketTextBox.Location = new System.Drawing.Point(482, 147);
             this.ticketTextBox.Name = "ticketTextBox";
             this.ticketTextBox.ReadOnly = true;
             this.ticketTextBox.Size = new System.Drawing.Size(138, 20);
@@ -47,7 +49,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(90, 9);
+            this.label4.Location = new System.Drawing.Point(277, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 24);
             this.label4.TabIndex = 12;
@@ -56,17 +58,37 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(72, 59);
+            this.label1.Location = new System.Drawing.Point(495, 131);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 13);
             this.label1.TabIndex = 13;
             this.label1.Text = "Number of tickets sold";
             // 
+            // moviesListBox
+            // 
+            this.moviesListBox.FormattingEnabled = true;
+            this.moviesListBox.Location = new System.Drawing.Point(12, 36);
+            this.moviesListBox.Name = "moviesListBox";
+            this.moviesListBox.Size = new System.Drawing.Size(218, 290);
+            this.moviesListBox.TabIndex = 14;
+            this.moviesListBox.SelectedIndexChanged += new System.EventHandler(this.moviesListBox_SelectedIndexChanged);
+            // 
+            // showtimesListBox
+            // 
+            this.showtimesListBox.FormattingEnabled = true;
+            this.showtimesListBox.Location = new System.Drawing.Point(236, 36);
+            this.showtimesListBox.Name = "showtimesListBox";
+            this.showtimesListBox.Size = new System.Drawing.Size(218, 290);
+            this.showtimesListBox.TabIndex = 15;
+            this.showtimesListBox.SelectedIndexChanged += new System.EventHandler(this.showtimesListBox_SelectedIndexChanged);
+            // 
             // Tickets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(251, 116);
+            this.ClientSize = new System.Drawing.Size(647, 329);
+            this.Controls.Add(this.showtimesListBox);
+            this.Controls.Add(this.moviesListBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ticketTextBox);
@@ -83,5 +105,7 @@
         private System.Windows.Forms.TextBox ticketTextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox moviesListBox;
+        private System.Windows.Forms.ListBox showtimesListBox;
     }
 }
