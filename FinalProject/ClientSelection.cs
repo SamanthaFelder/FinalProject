@@ -250,6 +250,8 @@ namespace FinalProject
                     return;
                 }
 
+                
+
                 int index = moviesListBox.SelectedIndices[0];
                 string Name = moviesListBox.Items[index].ToString();
 
@@ -270,7 +272,7 @@ namespace FinalProject
 
                     if (foundMovie[SearchMoviesByName(Name)].Id == ShowTime.MovieId)
                     {
-                        //to check seleted date
+                       
                         Date = ShowTime.Date;
                         Room = ShowTime.RoomCode;
                         ShowTimeId = ShowTime.Id.ToString();
@@ -283,6 +285,8 @@ namespace FinalProject
                 MessageBox.Show(ex.Message);
             }
         }
+
+        
     }
 }
 //to check seleted date

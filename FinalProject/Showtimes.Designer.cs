@@ -35,21 +35,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.movieTextBox = new System.Windows.Forms.TextBox();
             this.dateTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.showtimesListbox = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.costTextBox = new System.Windows.Forms.TextBox();
-            this.roomTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.RoomComboBox = new System.Windows.Forms.ComboBox();
+            this.movieComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // deleteButton
             // 
             this.deleteButton.Location = new System.Drawing.Point(208, 415);
-            this.deleteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(4);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(136, 28);
             this.deleteButton.TabIndex = 21;
@@ -60,7 +60,7 @@
             // modifyButton
             // 
             this.modifyButton.Location = new System.Drawing.Point(67, 415);
-            this.modifyButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.modifyButton.Margin = new System.Windows.Forms.Padding(4);
             this.modifyButton.Name = "modifyButton";
             this.modifyButton.Size = new System.Drawing.Size(133, 28);
             this.modifyButton.TabIndex = 20;
@@ -71,7 +71,7 @@
             // addButton
             // 
             this.addButton.Location = new System.Drawing.Point(208, 379);
-            this.addButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addButton.Margin = new System.Windows.Forms.Padding(4);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(136, 28);
             this.addButton.TabIndex = 19;
@@ -82,7 +82,7 @@
             // consultButton
             // 
             this.consultButton.Location = new System.Drawing.Point(67, 379);
-            this.consultButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.consultButton.Margin = new System.Windows.Forms.Padding(4);
             this.consultButton.Name = "consultButton";
             this.consultButton.Size = new System.Drawing.Size(133, 28);
             this.consultButton.TabIndex = 18;
@@ -120,18 +120,10 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "ID";
             // 
-            // movieTextBox
-            // 
-            this.movieTextBox.Location = new System.Drawing.Point(429, 199);
-            this.movieTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.movieTextBox.Name = "movieTextBox";
-            this.movieTextBox.Size = new System.Drawing.Size(155, 22);
-            this.movieTextBox.TabIndex = 14;
-            // 
             // dateTextBox
             // 
             this.dateTextBox.Location = new System.Drawing.Point(429, 150);
-            this.dateTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.dateTextBox.Name = "dateTextBox";
             this.dateTextBox.Size = new System.Drawing.Size(155, 22);
             this.dateTextBox.TabIndex = 13;
@@ -139,7 +131,7 @@
             // idTextBox
             // 
             this.idTextBox.Location = new System.Drawing.Point(429, 102);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(155, 22);
             this.idTextBox.TabIndex = 12;
@@ -149,7 +141,7 @@
             this.showtimesListbox.FormattingEnabled = true;
             this.showtimesListbox.ItemHeight = 16;
             this.showtimesListbox.Location = new System.Drawing.Point(67, 59);
-            this.showtimesListbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.showtimesListbox.Margin = new System.Windows.Forms.Padding(4);
             this.showtimesListbox.Name = "showtimesListbox";
             this.showtimesListbox.Size = new System.Drawing.Size(276, 292);
             this.showtimesListbox.TabIndex = 11;
@@ -178,18 +170,10 @@
             // costTextBox
             // 
             this.costTextBox.Location = new System.Drawing.Point(429, 298);
-            this.costTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.costTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.costTextBox.Name = "costTextBox";
             this.costTextBox.Size = new System.Drawing.Size(155, 22);
             this.costTextBox.TabIndex = 23;
-            // 
-            // roomTextBox
-            // 
-            this.roomTextBox.Location = new System.Drawing.Point(429, 250);
-            this.roomTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.roomTextBox.Name = "roomTextBox";
-            this.roomTextBox.Size = new System.Drawing.Size(155, 22);
-            this.roomTextBox.TabIndex = 22;
             // 
             // label6
             // 
@@ -202,16 +186,33 @@
             this.label6.TabIndex = 26;
             this.label6.Text = "Showtimes";
             // 
+            // RoomComboBox
+            // 
+            this.RoomComboBox.FormattingEnabled = true;
+            this.RoomComboBox.Location = new System.Drawing.Point(429, 251);
+            this.RoomComboBox.Name = "RoomComboBox";
+            this.RoomComboBox.Size = new System.Drawing.Size(155, 24);
+            this.RoomComboBox.TabIndex = 27;
+            // 
+            // movieComboBox
+            // 
+            this.movieComboBox.FormattingEnabled = true;
+            this.movieComboBox.Location = new System.Drawing.Point(428, 203);
+            this.movieComboBox.Name = "movieComboBox";
+            this.movieComboBox.Size = new System.Drawing.Size(156, 24);
+            this.movieComboBox.TabIndex = 28;
+            // 
             // Showtimes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(655, 480);
+            this.Controls.Add(this.movieComboBox);
+            this.Controls.Add(this.RoomComboBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.costTextBox);
-            this.Controls.Add(this.roomTextBox);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.modifyButton);
             this.Controls.Add(this.addButton);
@@ -219,11 +220,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.movieTextBox);
             this.Controls.Add(this.dateTextBox);
             this.Controls.Add(this.idTextBox);
             this.Controls.Add(this.showtimesListbox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Showtimes";
             this.Text = "Showtimes";
             this.ResumeLayout(false);
@@ -240,14 +240,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox movieTextBox;
         private System.Windows.Forms.TextBox dateTextBox;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.ListBox showtimesListbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox costTextBox;
-        private System.Windows.Forms.TextBox roomTextBox;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox RoomComboBox;
+        private System.Windows.Forms.ComboBox movieComboBox;
     }
 }
