@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FinalProject
 {
-    class Movie : Genre
+    class Movie
     {
         public List<ShowTime> ShowTime { get; set; }
         public List<Genre> Genres { get; set; }

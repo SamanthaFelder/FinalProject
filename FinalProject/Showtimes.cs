@@ -241,7 +241,7 @@ namespace FinalProject
                 dbConnection9.Open();
 
                 //This is a string representing the SQL query to execute in the db
-                string sqlQuery1 = "INSERT INTO showtime VALUES('" + ShowTime.Id + "', '" + ShowTime.Date + "', '" + ShowTime.MovieId + "', '" + ShowTime.RoomCode + "', '" + ShowTime.TicketPrice + "');";
+                string sqlQuery1 = "INSERT INTO showtime VALUES('" + ShowTime.Id + "', '" + ShowTime.Date + "', '" + foundMovie[movieComboBox.SelectedIndex].Id + "', '" + ShowTime.RoomCode + "', '" + ShowTime.TicketPrice + "');";
 
                 //This is the actual SQL containing the query to be executed
                 dbCommand9 = new NpgsqlCommand(sqlQuery1, dbConnection9);
@@ -268,8 +268,7 @@ namespace FinalProject
 
         private int ModifyShowTimeInDB(ShowTime ShowTime)
         {
-            try
-            {
+           
                 NpgsqlConnection dbConnection12 = CreateDBConnection(DbServerHost, DbUsername, DbUuserPassword, DbName);
 
                 //This variable will store the number of affecter rows by the INSERT query
@@ -279,7 +278,7 @@ namespace FinalProject
                 dbConnection12.Open();
 
                 //This is a string representing the SQL query to execute in the db           
-                string sqlQuery = "UPDATE screening_room SET movie_id = '" + ShowTime.MovieId + "', date_time = '" + ShowTime.Date + "', s_room_code = '" + ShowTime.RoomCode + "', ticket_price = '" + ShowTime.TicketPrice + "' WHERE id = '" + ShowTime.Id + "';";
+                string sqlQuery = "UPDATE showtime SET date_time = '" + ShowTime.Date + "', ticket_price = '" + ShowTime.TicketPrice + "' WHERE id = '" + ShowTime.Id + "';";
 
                 //This is the actual SQL containing the query to be executed
                 NpgsqlCommand dbCommand12 = new NpgsqlCommand(sqlQuery, dbConnection12);
@@ -290,17 +289,8 @@ namespace FinalProject
                 dbConnection12.Close();
 
                 return queryResult;
-            }
-            catch
-            {
-                MessageBox.Show("please Modify a different ShowTime");
-
-                NpgsqlConnection dbConnection12 = CreateDBConnection(DbServerHost, DbUsername, DbUuserPassword, DbName);
-
-                dbConnection12.Close();
-
-                return 0;
-            }
+            
+            
         }
 
         private int DeleteShowTimeInDB(ShowTime ShowTime)
@@ -385,7 +375,7 @@ namespace FinalProject
 
                 idTextBox.Text = foundShowTime[SearchMoviesByName(Name)].Id.ToString();
                 dateTextBox.Text = foundShowTime[SearchMoviesByName(Name)].Date.ToString();
-                costTextBox.Text = foundShowTime[SearchMoviesByName(Name)].TicketPrice.ToString("c");
+                costTextBox.Text = foundShowTime[SearchMoviesByName(Name)].TicketPrice.ToString();
 
 
             }
@@ -401,7 +391,6 @@ namespace FinalProject
 
             NewShowTime.Id = int.Parse(idTextBox.Text);
             NewShowTime.Date = DateTime.Parse(dateTextBox.Text);
-            NewShowTime.MovieId = int.Parse(movieComboBox.Text);
             NewShowTime.RoomCode = RoomComboBox.Text;
             NewShowTime.TicketPrice = double.Parse(costTextBox.Text);
 
@@ -418,7 +407,6 @@ namespace FinalProject
 
             ModifyShowTime.Id = int.Parse(idTextBox.Text);
             ModifyShowTime.Date = DateTime.Parse(dateTextBox.Text);
-            ModifyShowTime.MovieId = int.Parse(movieComboBox.Text);
             ModifyShowTime.RoomCode = RoomComboBox.Text;
             ModifyShowTime.TicketPrice = double.Parse(costTextBox.Text);
 
@@ -434,7 +422,6 @@ namespace FinalProject
 
             DeleteShowTime.Id = int.Parse(idTextBox.Text);
             DeleteShowTime.Date = DateTime.Parse(dateTextBox.Text);
-            DeleteShowTime.MovieId = int.Parse(movieComboBox.Text);
             DeleteShowTime.RoomCode = RoomComboBox.Text;
             DeleteShowTime.TicketPrice = double.Parse(costTextBox.Text);
 

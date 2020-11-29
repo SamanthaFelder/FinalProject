@@ -318,7 +318,7 @@ namespace FinalProject
                 }
 
                 dbConnection.Open();
-                string sqlQuery = "INSERT INTO jt_genre_movie VALUES('" + movie.Code + "', '" + movie.Id + "');";
+                string sqlQuery = "INSERT INTO jt_genre_movie VALUES('" + foundGenre[genreComboBox.SelectedIndex].Code + "', '" + movie.Id + "');";
 
                 dbCommand = new NpgsqlCommand(sqlQuery, dbConnection);
 
@@ -510,5 +510,5 @@ namespace FinalProject
             GetMovieFromDB();
             GetGenreFromDB();
         }
-    }//how to insert genre code with genre name
+    }
 }
