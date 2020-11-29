@@ -25,9 +25,11 @@ namespace FinalProject
             InitializeComponent();
             SetDBConnection(DbServerHost, DbUsername, DbUuserPassword, DbName);
             GetMovieFromDB();
+            GetGenreFromDB();
         }
 
         List<Movie> foundMovie = new List<Movie>();
+        List<Genre> foundGenre = new List<Genre>();
 
         private void SetDBConnection(string serverAddress, string username, string passwd, string dbName)
         {
@@ -43,6 +45,36 @@ namespace FinalProject
             dbConnection = new NpgsqlConnection(conectionString);
 
             return dbConnection;
+        }
+
+        private List<Genre> GetGenreFromDB()
+        {
+            Genre currentGenre;
+
+            dbConnection.Open();
+
+            // This is a string representing the SQL query to execute in the db.
+            string sqlQuery = "SELECT * FROM genre;";
+
+            NpgsqlCommand dbCommand = new NpgsqlCommand(sqlQuery, dbConnection);
+
+            NpgsqlDataReader dataReader = dbCommand.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                currentGenre = new Genre();
+
+                currentGenre.Code = dataReader.GetString(0);
+                currentGenre.Name = dataReader.GetString(1);
+                
+
+                foundGenre.Add(currentGenre);
+                genreComboBox.Items.Add(currentGenre.Name);
+
+            }
+            dbConnection.Close();
+
+            return foundGenre;
         }
 
         private List<Movie> GetMovieFromDB()
@@ -286,7 +318,7 @@ namespace FinalProject
                 }
 
                 dbConnection.Open();
-                string sqlQuery = "INSERT INTO jt_genre_movie VALUES('" + genreComboBox.Text + "', '" + movie.Id + "');";
+                string sqlQuery = "INSERT INTO jt_genre_movie VALUES('" + movie.Code + "', '" + movie.Id + "');";
 
                 dbCommand = new NpgsqlCommand(sqlQuery, dbConnection);
 
@@ -408,11 +440,6 @@ namespace FinalProject
             }
         }
 
-        private void consultButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void addButton_Click(object sender, EventArgs e)
         {
             Movie NewMovie = new Movie();
@@ -466,6 +493,22 @@ namespace FinalProject
             moviesListBox.Items.Clear();
             moviesPictureBox.ImageLocation = "";
             GetMovieFromDB();
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            idTextBox.Text = "";
+            titleTextBox.Text = "";
+            yearTextBox.Text = "";
+            lengthTextBox.Text = "";
+            ratingTextBox.Text = "";
+            genreComboBox.Text = "";
+            genreComboBox.Items.Clear();
+            moviesPictureBox.ImageLocation = "";
+            imageTextBox.Text = "";
+            moviesListBox.Items.Clear();
+            GetMovieFromDB();
+            GetGenreFromDB();
         }
     }//how to insert genre code with genre name
 }

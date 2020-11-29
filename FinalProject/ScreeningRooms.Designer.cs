@@ -35,7 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.consultButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
             this.modifyButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
@@ -47,7 +46,7 @@
             this.screeningRoomsListbox.FormattingEnabled = true;
             this.screeningRoomsListbox.ItemHeight = 16;
             this.screeningRoomsListbox.Location = new System.Drawing.Point(83, 55);
-            this.screeningRoomsListbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.screeningRoomsListbox.Margin = new System.Windows.Forms.Padding(4);
             this.screeningRoomsListbox.Name = "screeningRoomsListbox";
             this.screeningRoomsListbox.Size = new System.Drawing.Size(276, 292);
             this.screeningRoomsListbox.TabIndex = 0;
@@ -56,7 +55,7 @@
             // codeTextBox
             // 
             this.codeTextBox.Location = new System.Drawing.Point(445, 124);
-            this.codeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.codeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.codeTextBox.Name = "codeTextBox";
             this.codeTextBox.Size = new System.Drawing.Size(155, 22);
             this.codeTextBox.TabIndex = 1;
@@ -64,7 +63,7 @@
             // capacityTextBox
             // 
             this.capacityTextBox.Location = new System.Drawing.Point(445, 191);
-            this.capacityTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.capacityTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.capacityTextBox.Name = "capacityTextBox";
             this.capacityTextBox.Size = new System.Drawing.Size(155, 22);
             this.capacityTextBox.TabIndex = 2;
@@ -72,7 +71,7 @@
             // descriptionTextBox
             // 
             this.descriptionTextBox.Location = new System.Drawing.Point(445, 262);
-            this.descriptionTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.descriptionTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(155, 22);
             this.descriptionTextBox.TabIndex = 3;
@@ -107,21 +106,10 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Description";
             // 
-            // consultButton
-            // 
-            this.consultButton.Location = new System.Drawing.Point(83, 375);
-            this.consultButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.consultButton.Name = "consultButton";
-            this.consultButton.Size = new System.Drawing.Size(133, 28);
-            this.consultButton.TabIndex = 7;
-            this.consultButton.Text = "Consult";
-            this.consultButton.UseVisualStyleBackColor = true;
-            this.consultButton.Click += new System.EventHandler(this.consultButton_Click);
-            // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(224, 375);
-            this.addButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addButton.Location = new System.Drawing.Point(298, 372);
+            this.addButton.Margin = new System.Windows.Forms.Padding(4);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(136, 28);
             this.addButton.TabIndex = 8;
@@ -131,8 +119,8 @@
             // 
             // modifyButton
             // 
-            this.modifyButton.Location = new System.Drawing.Point(83, 411);
-            this.modifyButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.modifyButton.Location = new System.Drawing.Point(13, 372);
+            this.modifyButton.Margin = new System.Windows.Forms.Padding(4);
             this.modifyButton.Name = "modifyButton";
             this.modifyButton.Size = new System.Drawing.Size(133, 28);
             this.modifyButton.TabIndex = 9;
@@ -142,8 +130,8 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(224, 411);
-            this.deleteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deleteButton.Location = new System.Drawing.Point(154, 372);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(4);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(136, 28);
             this.deleteButton.TabIndex = 10;
@@ -166,12 +154,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(656, 485);
+            this.ClientSize = new System.Drawing.Size(656, 436);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.modifyButton);
             this.Controls.Add(this.addButton);
-            this.Controls.Add(this.consultButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -179,7 +166,7 @@
             this.Controls.Add(this.capacityTextBox);
             this.Controls.Add(this.codeTextBox);
             this.Controls.Add(this.screeningRoomsListbox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ScreeningRooms";
             this.Text = "ScreeningRooms";
             this.ResumeLayout(false);
@@ -196,7 +183,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button consultButton;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button modifyButton;
         private System.Windows.Forms.Button deleteButton;

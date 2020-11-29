@@ -31,7 +31,6 @@
             this.deleteButton = new System.Windows.Forms.Button();
             this.modifyButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
-            this.consultButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,12 +48,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.moviesPictureBox = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.clearButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.moviesPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(325, 410);
+            this.deleteButton.Location = new System.Drawing.Point(154, 369);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(4);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(136, 28);
@@ -65,7 +65,7 @@
             // 
             // modifyButton
             // 
-            this.modifyButton.Location = new System.Drawing.Point(184, 410);
+            this.modifyButton.Location = new System.Drawing.Point(13, 369);
             this.modifyButton.Margin = new System.Windows.Forms.Padding(4);
             this.modifyButton.Name = "modifyButton";
             this.modifyButton.Size = new System.Drawing.Size(133, 28);
@@ -76,7 +76,7 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(325, 374);
+            this.addButton.Location = new System.Drawing.Point(298, 369);
             this.addButton.Margin = new System.Windows.Forms.Padding(4);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(136, 28);
@@ -84,17 +84,6 @@
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
-            // 
-            // consultButton
-            // 
-            this.consultButton.Location = new System.Drawing.Point(184, 374);
-            this.consultButton.Margin = new System.Windows.Forms.Padding(4);
-            this.consultButton.Name = "consultButton";
-            this.consultButton.Size = new System.Drawing.Size(133, 28);
-            this.consultButton.TabIndex = 18;
-            this.consultButton.Text = "Consult";
-            this.consultButton.UseVisualStyleBackColor = true;
-            this.consultButton.Click += new System.EventHandler(this.consultButton_Click);
             // 
             // label3
             // 
@@ -256,11 +245,23 @@
             this.label8.TabIndex = 31;
             this.label8.Text = "Movies";
             // 
+            // clearButton
+            // 
+            this.clearButton.Location = new System.Drawing.Point(442, 369);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(4);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(136, 28);
+            this.clearButton.TabIndex = 32;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
             // Movies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(833, 481);
+            this.ClientSize = new System.Drawing.Size(833, 438);
+            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.moviesPictureBox);
             this.Controls.Add(this.label7);
@@ -274,7 +275,6 @@
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.modifyButton);
             this.Controls.Add(this.addButton);
-            this.Controls.Add(this.consultButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -296,7 +296,6 @@
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button modifyButton;
         private System.Windows.Forms.Button addButton;
-        private System.Windows.Forms.Button consultButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -314,5 +313,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox moviesPictureBox;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button clearButton;
     }
 }

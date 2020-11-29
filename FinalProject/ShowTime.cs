@@ -14,10 +14,13 @@ namespace FinalProject
         public int MovieId { get; set; }
         public string RoomCode { get; set; }
         public double TicketPrice { get; set; }
+        public List<Movie> Movie { get; set; }
+        public List<ScreeningRoom> ScreeningRoom { get; set; }
 
         public ShowTime()
         {
-
+            Movie = new List<Movie>();
+            ScreeningRoom = new List<ScreeningRoom>();
         }
     }
 }

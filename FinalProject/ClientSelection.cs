@@ -268,15 +268,8 @@ namespace FinalProject
 
                 foreach (ShowTime ShowTime in foundMovie[SearchMoviesByName(Name)].ShowTime)
                 {
-                    showtimesListBox.Items.Add(ShowTime.Date);
+                    showtimesListBox.Items.Add(ShowTime.Date +"\t"+  ShowTime.TicketPrice +"$");
 
-                    if (foundMovie[SearchMoviesByName(Name)].Id == ShowTime.MovieId)
-                    {
-                       
-                        Date = ShowTime.Date;
-                        Room = ShowTime.RoomCode;
-                        ShowTimeId = ShowTime.Id.ToString();
-                    }
                 }
 
             }
@@ -286,11 +279,24 @@ namespace FinalProject
             }
         }
 
-        
+        private void showtimesListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            int index = moviesListBox.SelectedIndices[0];
+            string Name = moviesListBox.Items[index].ToString();
+
+            foreach (ShowTime ShowTime in foundMovie[SearchMoviesByName(Name)].ShowTime)
+            {
+                if (foundMovie[SearchMoviesByName(Name)].Id == ShowTime.MovieId)
+                {
+
+                    Date = foundMovie[moviesListBox.SelectedIndex].ShowTime[showtimesListBox.SelectedIndex].Date;
+                    Room = ShowTime.RoomCode;
+                    ShowTimeId = ShowTime.Id.ToString();
+                }
+            }
+        }
     }
 }
-//to check seleted date
 //if s dosent already exist
-//show price and hour on list showtime
-//witch movie is with witch ticket
 //show after current date showtimes

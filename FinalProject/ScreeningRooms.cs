@@ -218,11 +218,6 @@ namespace FinalProject
             }
         }
 
-        private void consultButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void addButton_Click(object sender, EventArgs e)
         {
             ScreeningRoom NewScreeningRoom = new ScreeningRoom();

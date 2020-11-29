@@ -33,14 +33,6 @@ namespace FinalProject
             dbConnection = new NpgsqlConnection(conectionString);
         }
 
-        private NpgsqlConnection CreateDBConnection(string serverAddress, string username, string passwd, string dbName)
-        {
-            string conectionString = "Host=" + serverAddress + "; Username=" + username + "; Password=" + passwd + "; Database=" + dbName + ";";
-
-            dbConnection = new NpgsqlConnection(conectionString);
-
-            return dbConnection;
-        }
 
         private int InsertMemberInDB(Member member)
         {

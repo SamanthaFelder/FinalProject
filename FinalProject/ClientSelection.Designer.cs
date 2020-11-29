@@ -56,6 +56,7 @@
             this.showtimesListBox.Name = "showtimesListBox";
             this.showtimesListBox.Size = new System.Drawing.Size(289, 356);
             this.showtimesListBox.TabIndex = 1;
+            this.showtimesListBox.SelectedIndexChanged += new System.EventHandler(this.showtimesListBox_SelectedIndexChanged);
             // 
             // moviesPictureBox
             // 
